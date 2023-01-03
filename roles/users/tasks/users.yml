@@ -19,7 +19,7 @@
 - name: Users | add sudoers
   template:
     src: sudoers.j2
-    dest: /etc/sudoers.d/sermo_sudoers
+    dest: /etc/sudoers.d/sudoers
     mode: 0440
   tags: 
     - users
