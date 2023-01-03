@@ -1,0 +1,14 @@
+---
+users:
+  - username: user1
+    uid: 1500
+    key: ssh-rsa ... user1@pub-key
+  - username: user2
+    uid: 1501
+    key: ssh-rsa ... user2@pub-key
+  - username: user3
+    uid: 1502
+    key: ssh-rsa ... user3@pub-key
+
+remove_users: []
+  # List user accounts to remove here, one per line. Be sure to remove the '[]' above,

@@ -1,0 +1,11 @@
+# Managed by Ansible
+
+# allow SSH agents to be preserved through sudo
+Defaults    env_keep+=SSH_AUTH_SOCK
+
+# allow remote sudo from xops
+{% for item in users %}
+Defaults:{{ item.username }} !requiretty
+{{ item.username }} ALL=(ALL) NOPASSWD: ALL
+
+{% endfor %}
