@@ -11,7 +11,7 @@
 - name: Users | Add authorized keys
   authorized_key:
     user: "{{ item.username }}"
-    key: "{{ lookup('file', '../../../inventories/users/keys/'+ item.username + '.key.pub' ) }}"
+    key: "{{ item.username.key }}"
   with_items: "{{ users }}"
   tags: 
     - users
